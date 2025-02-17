@@ -38,11 +38,11 @@ Before you begin, make sure you have the following installed:
 ### Installation
 
 1. **Clone the repository**:
-   ```bash
    git clone https://github.com/your-username/movie-mafia.git
    cd movie-mafia
-Install dependencies: Run the following command to install all the required dependencies:
-npm install
-Start the app: Start the development server with the following command:
-npm run dev
-Open the app: Open your browser and visit http://localhost:3000 to view the app in action.
+2. **Install dependencies**:
+   **Run the following command to install all the required dependencies**:
+**npm install**
+3. **Start the app: Start the development server with the following command**:
+**npm run dev**
+**Open the app: Open your browser and visit http://localhost:3000 to view the app in action.**
