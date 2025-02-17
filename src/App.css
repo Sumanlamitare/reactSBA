@@ -1,13 +1,17 @@
 .navBar {
   background-color: burlywood;
   text-align: center;
-  height: auto;
-  border: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+
+  /* border: solid burlywood; */
+  height: 80px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
+
 .navBar h1 {
-  font-size: 60px;
+  font-size: 50px;
 }
 .movieContainer {
   display: grid;
@@ -45,4 +49,20 @@
 .details {
   margin-left: 3em;
   background-color: aqua;
+}
+.searchBar {
+  justify-self: center;
+  margin-top: 2em;
+}
+.search {
+  height: 20px;
+  margin-right: 0.5em;
+}
+.searchBtn {
+  width: 70px;
+  height: 25px;
+}
+.searchBtn:hover {
+  background-color: green;
+  border-radius: 20px;
 }

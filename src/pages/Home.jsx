@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Search from "../components/Search";
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
@@ -40,6 +41,7 @@ export default function Home() {
 
   return (
     <>
+      <Search></Search>
       <h1 className="label">Top 5 Movies of the Week</h1>
 
       <div className="movieContainer">
