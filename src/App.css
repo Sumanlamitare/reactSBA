@@ -1,0 +1,48 @@
+.navBar {
+  background-color: burlywood;
+  text-align: center;
+  height: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.navBar h1 {
+  font-size: 60px;
+}
+.movieContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+
+  height: 400px;
+}
+.movieHolder {
+  border: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  /* height: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.movieHolder:hover {
+  transform: scale(1.1);
+}
+.label {
+  text-align: center;
+  text-decoration: underline overline;
+  /* background-color: bisque; */
+}
+
+.movieDetail {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+.details {
+  margin-left: 3em;
+  background-color: aqua;
+}
