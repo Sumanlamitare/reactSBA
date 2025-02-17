@@ -41,8 +41,43 @@ Before you begin, make sure you have the following installed:
    git clone https://github.com/your-username/movie-mafia.git
    cd movie-mafia
 2. **Install dependencies**:
+
+   
    **Run the following command to install all the required dependencies**:
+   
 **npm install**
-3. **Start the app: Start the development server with the following command**:
+
+
+4. **Start the app: Start the development server with the following command**:
+
+   
 **npm run dev**
+
+
 **Open the app: Open your browser and visit http://localhost:3000 to view the app in action.**
+
+
+### Endpoints Used
+
+- **Search Movies**:  
+https://api.themoviedb.org/3/search/movie?query={query}&api_key=API_KEY
+
+
+
+- **Trending Movies**:  
+https://api.themoviedb.org/3/trending/movie/week?api_key=API_KEY
+
+
+
+
+- **Top Rated Movies**:  
+https://api.themoviedb.org/3/movie/top_rated?api_key=API_KEY
+
+
+
+- **Movie Details**:  
+https://api.themoviedb.org/3/movie/{id}?api_key=API_KEY
+
+
+- **Movie Cast**:  
+https://api.themoviedb.org/3/movie/{id}/credits?api_key=API_KEY
