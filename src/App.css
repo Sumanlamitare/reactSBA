@@ -1,5 +1,8 @@
+body {
+  background-color: lightcyan;
+}
 .navBar {
-  background-color: burlywood;
+  background-color: lightgreen;
   text-align: center;
   display: flex;
 
@@ -14,13 +17,18 @@
   font-size: 50px;
 }
 .movieContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  gap: 30px;
+  width: auto;
   height: 400px;
+  overflow-x: auto;
+  margin-left: 2em;
 }
 .movieHolder {
+  display: flex;
+  flex-direction: column;
+
   border: none;
   border-radius: 20px;
   background-color: black;
@@ -28,10 +36,14 @@
   /* height: auto; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
 }
-
+.movieHolder img {
+  height: auto;
+  object-fit: cover;
+}
 .movieHolder:hover {
   transform: scale(1.1);
 }
@@ -45,10 +57,11 @@
   display: flex;
 
   justify-content: space-evenly;
+  margin-top: 1em;
 }
 .details {
   margin-left: 3em;
-  background-color: aqua;
+  background-color: oldlace;
 }
 .searchBar {
   justify-self: center;

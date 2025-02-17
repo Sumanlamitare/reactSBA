@@ -14,7 +14,7 @@ export default function Home() {
     try {
       const response = await fetch(weekly_url);
       const data = await response.json();
-      setMovies(data.results.slice(0, 5));
+      setMovies(data.results);
     } catch (error) {
       console.log(error);
     }
@@ -28,7 +28,7 @@ export default function Home() {
     try {
       const response = await fetch(allTime_url);
       const data = await response.json();
-      setTopMovies(data.results.slice(0, 5));
+      setTopMovies(data.results);
     } catch (error) {
       console.log(error);
     }
@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       <Search></Search>
-      <h1 className="label">Top 5 Movies of the Week</h1>
+      <h1 className="label">Top Movies of the Week</h1>
 
       <div className="movieContainer">
         {movies.map((movie) => (
@@ -50,12 +50,13 @@ export default function Home() {
             key={movie.id}
             to={`/movie/${movie.id}`}
             className="movieHolder"
+            style={{ textDecoration: "none" }}
           >
             <img
               src={`https://image.tmdb.org/t/p/w200/${movie.backdrop_path}`}
               alt={movie.title}
             />
-            <h1>{movie.title}</h1>
+            <h4 style={{ marginTop: "3em" }}>{movie.title}</h4>
           </Link>
         ))}
       </div>
@@ -63,19 +64,20 @@ export default function Home() {
       <br />
       <br />
 
-      <h1 className="label">Top 5 Highest Rated Movies</h1>
+      <h1 className="label">Highest Rated Movies Of All Time</h1>
       <div className="movieContainer">
         {topMovies.map((movie) => (
           <Link
             key={movie.id}
             to={`/movie/${movie.id}`}
             className="movieHolder"
+            style={{ textDecoration: "none" }}
           >
             <img
               src={`https://image.tmdb.org/t/p/w200/${movie.backdrop_path}`}
               alt={movie.title}
             />
-            <h1>{movie.title}</h1>
+            <h4 style={{ marginTop: "3em" }}>{movie.title}</h4>
           </Link>
         ))}
       </div>
