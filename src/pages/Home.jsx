@@ -56,7 +56,7 @@ export default function Home() {
               src={`https://image.tmdb.org/t/p/w200/${movie.backdrop_path}`}
               alt={movie.title}
             />
-            <h4 style={{ marginTop: "3em" }}>{movie.title}</h4>
+            <h2 style={{ marginTop: "3em" }}>{movie.title}</h2>
           </Link>
         ))}
       </div>
@@ -77,7 +77,7 @@ export default function Home() {
               src={`https://image.tmdb.org/t/p/w200/${movie.backdrop_path}`}
               alt={movie.title}
             />
-            <h4 style={{ marginTop: "3em" }}>{movie.title}</h4>
+            <h2 style={{ marginTop: "3em" }}>{movie.title}</h2>
           </Link>
         ))}
       </div>

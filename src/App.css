@@ -23,6 +23,7 @@ body {
   width: auto;
   height: 400px;
   overflow-x: auto;
+  overflow-y: hidden;
   margin-left: 2em;
 }
 .movieHolder {
@@ -33,7 +34,7 @@ body {
   border-radius: 20px;
   background-color: black;
   color: white;
-  /* height: auto; */
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
