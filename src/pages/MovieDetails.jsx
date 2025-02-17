@@ -6,6 +6,21 @@ import "../App.css";
 export default function MovieDetails() {
   const { id } = useParams();
   const [movieDetail, setMovieDetail] = useState(null);
+  const [castDetail, setCastDetail] = useState([]);
+
+  async function getCast() {
+    const API_KEY = "bef053e54467bb6e45c979baff9072d7";
+    const url = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setCastDetail(data.cast);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   async function getMovieDetails() {
     const API_KEY = "bef053e54467bb6e45c979baff9072d7";
@@ -19,6 +34,7 @@ export default function MovieDetails() {
 
   useEffect(() => {
     getMovieDetails();
+    getCast();
   }, [id]);
   if (!movieDetail) {
     return <div>Loading...</div>;
@@ -81,6 +97,10 @@ export default function MovieDetails() {
         <p>
           <strong>Origin Country: </strong>
           {movieDetail.origin_country + " "}
+        </p>
+        <p>
+          <strong>Cast: </strong>
+          {castDetail.map((cast) => cast.name).join(", ")}
         </p>
       </div>
     </div>
