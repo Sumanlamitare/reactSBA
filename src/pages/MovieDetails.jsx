@@ -50,8 +50,22 @@ export default function MovieDetails() {
       <div className="details">
         <h1>{movieDetail.title}</h1>
         <p>
+          <strong>Tag Line: </strong>
+          {movieDetail.tagline}
+        </p>
+        <p>
           <strong>Release Date: </strong> {movieDetail.release_date}
         </p>
+
+        <p>
+          <strong>Collection: </strong>
+          {movieDetail.belongs_to_collection ? (
+            <span>{movieDetail.belongs_to_collection.name}</span>
+          ) : (
+            "Does not belong to any collection"
+          )}
+        </p>
+
         <p>
           <strong>Status: </strong> {movieDetail.status}
         </p>
