@@ -13,7 +13,7 @@ export default function Search() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button className="searchBtn" type="submit">
+      <button className="searchBtn" type="submit" disabled={!query}>
         Search
       </button>
     </form>
